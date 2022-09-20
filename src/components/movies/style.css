@@ -1,0 +1,59 @@
+.movie-card
+{
+    overflow: hidden;
+    border-radius: 18px;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+.movie-card:hover{
+    opacity: 0.6;
+    color: gray;
+    cursor: pointer;
+    padding: 0;
+}
+.movie-card img
+{
+    width: 100%;
+    height: 100%;
+
+}
+/*movie detail*/
+.movie-cover
+{
+    height: 360px;
+    background-repeat: no-repeat !important;
+    position: relative;
+    background-size: cover !important;
+}
+.movie-cover-detail
+{
+    position: absolute;
+    bottom: 20px;
+    display: grid;
+    gap:10px;
+    left: 20px;
+}
+.movie-detail-rating
+{
+    position: absolute;
+    top:10px;
+    right: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    padding: 10px;
+    border-radius: 10px;
+}
+.movie-detail-rating span{
+    font-size: 18px;
+    color: white;
+}
+.movie-cover-detail .MuiChip-root{
+    background: rgba( 100, 174, 174, 0.25 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    color: #fff;
+    font-size: 12px;
+}

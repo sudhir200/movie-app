@@ -1,0 +1,21 @@
+.search-header-text{
+    margin-bottom: 10px;
+    font-weight: 700;
+    font-size: 1.35em;
+    color: #5a5a5a;
+}
+.search-wrapper{
+    display: grid;
+    gap: 10px;
+}
+.search-input
+{
+    padding: 12.5px;
+    background: #282828;
+    color: #a2a2a2;
+    border: none;
+    width: 100%;
+    font-size: 16px;
+    border-radius: 5px;
+    outline: none;
+}
