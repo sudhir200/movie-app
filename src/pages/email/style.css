@@ -1,0 +1,13 @@
+.csv-table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.csv-table th, td {
+    text-align: left;
+    padding: 10px;
+}
+
+.csv-table tr:nth-child(even) {
+    background-color: #D6EEEE;
+}
