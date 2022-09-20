@@ -1,6 +1,7 @@
 import React from "react";
-import { Box } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import "./style.css";
+import { Star } from "@mui/icons-material";
 
 function MovieCard(props) {
   let movie = props?.movie;
@@ -12,7 +13,18 @@ function MovieCard(props) {
         }}
         className={"movie-card"}
       >
-        <img loading={"lazy"} src={movie?.medium_cover_image} alt={""} />
+        <img
+          loading={"lazy"}
+          src={movie?.medium_cover_image}
+          onError={(e) => {
+            e.target.src = movie?.background_image;
+          }}
+          alt={""}
+        />
+        <Box className={"rating-wrap"} position={"absolute"} top={0} right={0}>
+          <span>{movie.rating} / 10</span>
+          <Star color={"warning"} fontSize={"inherit"} />
+        </Box>
       </Box>
     </>
   );

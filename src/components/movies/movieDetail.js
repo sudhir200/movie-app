@@ -34,11 +34,14 @@ function MovieDetail(props) {
   }, [props?.movieId]);
   return (
     <>
-      <Drawer anchor={"right"} open={props?.open}>
+      <Drawer
+        anchor={window.innerWidth < 700 ? "bottom" : "right"}
+        open={props?.open}
+      >
         {loading ? (
           <LinearProgress />
         ) : (
-          <Box maxWidth={"sm"}>
+          <Box minWidth={{ sm: 500, xs: "100%" }} maxWidth={"sm"}>
             <Box
               display={"flex"}
               alignItems={"center"}
@@ -47,7 +50,12 @@ function MovieDetail(props) {
               my={1}
             >
               <Typography fontWeight={700}>{movieDetail?.title}</Typography>
-              <IconButton onClick={() => props?.handleClose()}>
+              <IconButton
+                onClick={() => {
+                  setPlaying(false);
+                  props?.handleClose();
+                }}
+              >
                 <CloseOutlined />
               </IconButton>
             </Box>
@@ -97,7 +105,7 @@ function MovieDetail(props) {
                     fontSize={25}
                     fontWeight={700}
                   >
-                    {movieDetail?.title},{movieDetail?.year}
+                    {movieDetail?.title}, {movieDetail?.year}
                   </Typography>
                   <Box
                     display={"flex"}

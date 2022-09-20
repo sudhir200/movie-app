@@ -10,3 +10,11 @@
     background: #212121;
     color: #ffffff;
 }
+.MuiPagination-ul button{
+    color: white;
+
+}
+.Mui-selected
+{
+    background: #5a5a5a !important;
+}
