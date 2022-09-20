@@ -1,9 +1,11 @@
 import axios from "axios";
 
-export function getMoviesByName(query) {
+export function getMoviesByName(query, quality, genre) {
   return new Promise((resolve, reject) => {
     axios
-      .get(`https://yts.mx/api/v2/list_movies.json?query_term=${query}`)
+      .get(
+        `https://yts.mx/api/v2/list_movies.json?query_term=${query}&quality=${quality}&genre=${genre}`
+      )
       .then((res) => {
         resolve(res?.data?.data);
       })

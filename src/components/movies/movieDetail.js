@@ -147,7 +147,8 @@ function MovieDetail(props) {
                   >
                     {/*  magnet:?xt=urn:btih:{info_hash}*/}
                     <Box
-                      my={2}
+                      mt={4}
+                      mb={2}
                       display={"flex"}
                       flexDirection={"column"}
                       gap={2}
@@ -175,8 +176,8 @@ function MovieDetail(props) {
                       position={"absolute"}
                       top={10}
                       left={10}
-                      display={"flex"}
-                      gap={1}
+                      display={"grid"}
+                      gap={0.5}
                     >
                       <Typography
                         fontSize={12}

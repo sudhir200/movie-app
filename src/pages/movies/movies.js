@@ -25,10 +25,12 @@ function Movies(props) {
         />
       </Box>
       {movies?.page_number ? (
-        <Box px={{ sm: 2, md: 10, xs: 1 }} py={{ sm: 2, md: 2, xs: 1 }}>
-          <h4>
-            {movies?.movie_count} movies found for query "{searchText}"
-          </h4>
+        <Box
+          sx={{ background: "#212121", color: "#fff" }}
+          px={{ sm: 2, md: 10, xs: 1 }}
+          py={{ sm: 2, md: 2, xs: 1 }}
+        >
+          <h4>{movies?.movie_count} movies found.</h4>
           <div className={"results-wrapper"}>
             {movies?.movies?.map((item) => (
               <MovieCard
