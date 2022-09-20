@@ -2,7 +2,6 @@ import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Movies from "../pages/movies/movies";
 import Header from "../components/header/header";
-import EmailAndPhone from "../pages/email/emailAndPhone";
 
 function Routing(props) {
   return (
