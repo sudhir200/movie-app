@@ -1,33 +1,5 @@
 export const searchFields = [
-  {
-    name: "Quality",
-    options: [
-      {
-        name: "All",
-        value: "all",
-      },
-      {
-        name: "480p",
-        value: "480p",
-      },
-      {
-        name: "720p",
-        value: "720p",
-      },
-      {
-        name: "1080p",
-        value: "1080p",
-      },
-      {
-        name: "2160p",
-        value: "2160p",
-      },
-      {
-        name: "3D",
-        value: "3D",
-      },
-    ],
-  },
+
   {
     name: "Genre",
     options: [
@@ -138,6 +110,35 @@ export const searchFields = [
       {
         name: "Western",
         value: "western",
+      },
+    ],
+  },
+  {
+    name: "Quality",
+    options: [
+      {
+        name: "All",
+        value: "all",
+      },
+      {
+        name: "480p",
+        value: "480p",
+      },
+      {
+        name: "720p",
+        value: "720p",
+      },
+      {
+        name: "1080p",
+        value: "1080p",
+      },
+      {
+        name: "2160p",
+        value: "2160p",
+      },
+      {
+        name: "3D",
+        value: "3D",
       },
     ],
   },

@@ -13,6 +13,7 @@ import {
   Attachment,
   CloseOutlined,
   Download,
+  FileCopy,
   PlayCircleOutline,
   Star,
 } from "@mui/icons-material";
@@ -173,11 +174,14 @@ function MovieDetail(props) {
                       <Button
                         variant={"outlined"}
                         size={"small"}
-                        startIcon={<Attachment />}
-                        href={`magnet:?xt=urn:btih:${item?.hash}l`}
-                        target={"_blank"}
+                        startIcon={<FileCopy />}
+                        onClick={() => {
+                          navigator?.clipboard?.writeText(
+                            `magnet:?xt=urn:btih:${item?.hash}`
+                          );
+                        }}
                       >
-                        Magnet link
+                        Copy Magnet link
                       </Button>
                     </Box>
                     <Box

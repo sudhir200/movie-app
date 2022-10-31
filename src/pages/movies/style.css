@@ -18,3 +18,8 @@
 {
     background: #5a5a5a !important;
 }
+@media screen and (max-width: 700px) {
+    .results-wrapper{
+        grid-template-columns: repeat(auto-fill, minmax(80px, 1fr) ) ;
+    }
+}
