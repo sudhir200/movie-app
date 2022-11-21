@@ -68,3 +68,20 @@ workbox.routing.registerRoute(
     ],
   })
 );
+workbox.routing.registerRoute(
+  // Check to see if the request's destination is style for stylesheets, script for JavaScript, or worker for web worker
+  ({ request }) => request.url.includes("/api/v2/"),
+  // Use a Stale While Revalidate caching strategy
+  // eslint-disable-next-line no-undef
+  new workbox.strategies.StaleWhileRevalidate({
+    // Put all cached files in a cache named 'assets'
+    cacheName: "apis",
+    plugins: [
+      // Ensure that only requests that result in a 200 status are cached
+      // eslint-disable-next-line no-undef
+      new workbox.cacheableResponse.CacheableResponsePlugin({
+        statuses: [200],
+      }),
+    ],
+  })
+);
